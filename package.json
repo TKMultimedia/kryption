@@ -1,14 +1,15 @@
 {
   "name": "kryption",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A simple string encode and decode base on string key.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
+    "clean": "shx rm -rf dist",
     "prepublish": "npm run build",
-    "build": "tsc",
+    "build": "npm run clean && tsc && npm run minify",
     "test": "test",
-    "debug": "npm run build && node test.js"
+    "minify": "uglifyjs --compress --mangle --output dist/index.js -- dist/index.js"
   },
   "repository": {
     "type": "git",
@@ -28,7 +29,9 @@
   },
   "homepage": "https://github.com/TKMultimedia/kryption#readme",
   "devDependencies": {
-    "typescript": "^3.8.3"
+    "shx": "^0.3.2",
+    "typescript": "^3.8.3",
+    "uglify-js": "^3.8.1"
   },
   "dependencies": {
     "@types/md5": "^2.1.33",
