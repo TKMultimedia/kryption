@@ -1,0 +1,38 @@
+{
+  "name": "kryption",
+  "version": "1.0.0",
+  "description": "A simple string encode and decode base on string key.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "tsc",
+    "test": "test",
+    "debug": "npm run build && node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TKMultimedia/kryption.git"
+  },
+  "keywords": [
+    "encryption",
+    "encode",
+    "decode",
+    "string",
+    "process"
+  ],
+  "author": "ThienKhoi Tran <tranthienkhoi@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TKMultimedia/kryption/issues"
+  },
+  "homepage": "https://github.com/TKMultimedia/kryption#readme",
+  "devDependencies": {
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "@types/md5": "^2.1.33",
+    "@types/node": "^13.11.0",
+    "md5": "^2.2.1"
+  }
+}
